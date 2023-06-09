@@ -18,4 +18,4 @@ router.get("/products", authenticate, getProducts);
 router.post("/create-product", authenticate, createProduct)
 
 
-module.exports = router;
+module.exports = router
