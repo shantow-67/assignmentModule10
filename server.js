@@ -7,7 +7,6 @@ require("dotenv").config();
 
 // Security Package import
 const cors = require('cors');
-const xss = require("xss-clean");
 const ratelimit = require("express-rate-limit");
 const helmet = require("helmet");
 
@@ -15,7 +14,6 @@ const helmet = require("helmet");
 
 // middlewares
 app.use(cors());
-app.use(xss());
 app.use(helmet());
 app.use(express.json({limit: "50mb"}));
 app.use(express.urlencoded({limit:"50mb", extended: false}));
